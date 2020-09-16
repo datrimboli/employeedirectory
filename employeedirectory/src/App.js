@@ -24,11 +24,11 @@ const App = () => {
         Header: 'Gender',
         accessor: 'gender'
       },
-      {
-        Header: 'D.O.B.',
-        accessor: 'dob'
-      }
-    ]
+    {
+      Header: 'D.O.B',
+      accessor: 'dob'
+    }
+     ]
   })
 
   useEffect(() => {
@@ -39,7 +39,11 @@ const App = () => {
         let employees = data.results.map(employee => ({
           name: employee.name.first + ' ' + employee.name.last,
           email: employee.email,
-          phone: employee.phone
+          phone: employee.phone,
+          gender: employee.gender,
+          dob: employee.dob.date
+          
+          
         }))
         setEmployeeState({ ...employeeState, employees })
       })
