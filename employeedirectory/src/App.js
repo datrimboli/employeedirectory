@@ -20,6 +20,14 @@ const App = () => {
         Header: 'Email',
         accessor: 'email'
       },
+      {
+        Header: 'Gender',
+        accessor: 'gender'
+      },
+      {
+        Header: 'D.O.B.',
+        accessor: 'dob'
+      }
     ]
   })
 
