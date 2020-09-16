@@ -25,8 +25,8 @@ const App = () => {
         accessor: 'gender'
       },
     {
-      Header: 'D.O.B',
-      accessor: 'dob'
+      Header: 'Age',
+      accessor: 'age'
     }
      ]
   })
@@ -41,7 +41,7 @@ const App = () => {
           email: employee.email,
           phone: employee.phone,
           gender: employee.gender,
-          dob: employee.dob.date
+          age: employee.dob.age
           
           
         }))
