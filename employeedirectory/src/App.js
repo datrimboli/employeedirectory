@@ -9,6 +9,7 @@ const App = () => {
   const [employeeState, setEmployeeState] = useState({
     employees: [],
     columns: [
+      // Catagories
       {
         Header: 'Name',
         accessor: 'name'
@@ -25,15 +26,15 @@ const App = () => {
         Header: 'Gender',
         accessor: 'gender'
       },
-    {
-      Header: 'Age',
-      accessor: 'age'
-    },
+      {
+        Header: 'Age',
+        accessor: 'age'
+      },
       {
         Header: 'Picture',
         accessor: 'picture'
       }
-     ]
+    ]
   })
 
   useEffect(() => {
@@ -42,15 +43,16 @@ const App = () => {
         console.log(data.results)
 
         let employees = data.results.map(employee => ({
+          // Links to specific axios data
           name: employee.name.first + ' ' + employee.name.last,
           email: employee.email,
           phone: employee.phone,
           gender: employee.gender,
           age: employee.dob.age,
-          picture: <img src={employee.picture.large} alt="employees"/> 
-        
-          
-          
+          picture: <img src={employee.picture.large} alt="employees" />
+
+
+
         }))
         setEmployeeState({ ...employeeState, employees })
       })
