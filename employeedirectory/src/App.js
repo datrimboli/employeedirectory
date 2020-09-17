@@ -27,7 +27,11 @@ const App = () => {
     {
       Header: 'Age',
       accessor: 'age'
-    }
+    },
+      {
+        Header: 'Picture',
+        accessor: 'picture'
+      }
      ]
   })
 
@@ -41,7 +45,9 @@ const App = () => {
           email: employee.email,
           phone: employee.phone,
           gender: employee.gender,
-          age: employee.dob.age
+          age: employee.dob.age,
+          picture: <img src={employee.picture.large} alt="employees"/> 
+        
           
           
         }))
